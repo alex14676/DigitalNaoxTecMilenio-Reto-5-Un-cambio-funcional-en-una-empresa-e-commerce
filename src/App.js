@@ -17,7 +17,8 @@ function App() {
   const navigate = useNavigate()
   const location = useLocation()
   const [noData, setNoData] = useState(false)
-  const API_URL = process.env.REACT_APP_API_URL;
+  // const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = "http://localhost:3001";
   useEffect(() => {
 
     const getCharts = () => {
