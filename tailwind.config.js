@@ -24,14 +24,6 @@ export const plugins = [require("daisyui")];
 export const daisyui = {
   themes: [
     {
-      // dark: {
-      //   ...require("daisyui/src/colors/themes")["[data-theme=dark]"],
-      //   "neutral": "#000",
-      //   "neutral-content": '#fff',
-      //   "base-content": '#fff',
-      //   "base-100": "#0F0E0E",
-      //   "base-200": "#3C3C3C",
-      // },
       light: {
         ...require("daisyui/src/colors/themes")["[data-theme=light]"],
         "neutral": "#FFF",

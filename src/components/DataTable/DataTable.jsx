@@ -9,9 +9,9 @@ const DataTable = ({data, title, length, isProducts, isGlobal}) => {
       <Card title = {title} size = 'lg'>
       <div className='data-table'>
         <div className='labels data-table-row'>
-          <span>Country</span>
-          <span className='mobile-hidden' >Sales</span>
-          <span>Amount</span>
+          <span>Pais</span>
+          <span className='mobile-hidden' >Ventas</span>
+          <span>Monto</span>
         </div>
         <div className='items'>
           {data?.slice(0, length).map((item, idx) => {
@@ -33,22 +33,22 @@ const DataTable = ({data, title, length, isProducts, isGlobal}) => {
     <Card title = {title} size = 'lg'>
       <div className='data-table'>
         <div className='labels data-table-row'>
-          <span className='mobile-hidden' >No</span>
+          <span className='mobile-hidden' >Nr</span>
           <span>Id</span>
-          <span className={isProducts? null : "mobile-hidden" }>{isProducts? "Product" : "Customer"} Name</span>
+          <span>Nombre</span>
           {isProducts ? (
             <>
-              <span className='mobile-hidden' >Category</span>
-              <span className='mobile-hidden' >Sales</span>
+              <span className='mobile-hidden' >Categoria</span>
+              <span className='mobile-hidden' >Ventas</span>
             </>
           ) : (
             <>
-            <span className='mobile-hidden' >City</span>
-            <span className='mobile-hidden' >Order Date</span>
-            <span>Status</span>
+            <span className='mobile-hidden' >Ciudad</span>
+            <span className='mobile-hidden' >Fecha de Emisión</span>
+            <span>Estado</span>
             </>
           )}
-          <span>Amount</span>
+          <span>Monto</span>
         </div>
         <div className='items'>
           {data?.slice(0, length).map((item, idx) => {

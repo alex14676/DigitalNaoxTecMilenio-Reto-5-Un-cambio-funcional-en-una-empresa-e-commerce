@@ -1,6 +1,6 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-// Create a slice
+// Crea el segmento
 const userSlice = createSlice({
   name: 'user',
   initialState: {
@@ -42,17 +42,16 @@ const chartsSlice = createSlice({
 });
 
 
-// Extract the reducer and actions from the slice
+// Extrae el reductor y las acciones del segmento 
 const {actions: userActions } = userSlice;
 const {actions: chartActions } = chartsSlice;
 
 
-// Create the Redux store
+// Crea la tienda Redux
 const store = configureStore({
   reducer: {
     user: userSlice.reducer,
     charts: chartsSlice.reducer
-    // Add other reducers here if needed
   },
 });
 

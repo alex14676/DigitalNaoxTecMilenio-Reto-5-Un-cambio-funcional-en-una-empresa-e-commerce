@@ -10,11 +10,16 @@ const TopBar = () => {
   const surname = useSelector((state) => state.user.surname);
 
   const [isRegister, setIsRegister] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
   const [currentDate, setCurrentDate] = useState("");
   const location = useLocation();
 
   useEffect(() => {
     setIsRegister(location.pathname === '/register');
+  }, [location]);
+
+  useEffect(() => {
+    setIsLogin(location.pathname === '/login');
   }, [location]);
 
   useEffect(() => {

@@ -1,16 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import './NavBar.scss'
 import logo from '../../assets/svg/logo.svg'
 import home from '../../assets/svg/home.svg'
 import analytics from '../../assets/svg/analytics.svg'
 import product from '../../assets/svg/product.svg'
 import payment from '../../assets/svg/payment.svg'
-import orders from '../../assets/svg/orders.svg'
 import clients from '../../assets/svg/clients.svg'
-import marketing from '../../assets/svg/marketing.svg'
-import config from '../../assets/svg/config.svg'
-import user from '../../assets/svg/user.svg'
 import logout from '../../assets/svg/logout.svg'
 
 
@@ -18,10 +14,15 @@ import logout from '../../assets/svg/logout.svg'
 const NavBar = () => {
 
   const [isRegister, setIsRegister] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
   const location = useLocation()
   useEffect(() => {
     setIsRegister(location.pathname === '/register');
   }, [location]);
+  useEffect(() => {
+    setIsLogin(location.pathname === '/login');
+  }, [location]);
+
 
 
   return ( 

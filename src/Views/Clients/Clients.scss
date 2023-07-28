@@ -6,6 +6,6 @@
   @apply flex flex-col gap-8
   md:flex-row md:flex-wrap;
   .md {
-    @apply max-h-[185px] md:w-[calc(50%-2rem)]
+    @apply max-h-[185px] md:w-[calc(50%-2rem)] flex
   }
 }

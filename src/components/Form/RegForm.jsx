@@ -11,6 +11,7 @@ import {
 } from '../../redux/store';
 import FormInput from './FormInput';
 import './RegForm.scss'
+import { NavLink } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
 
  
@@ -52,10 +53,7 @@ const validate = values => {
 };
 
 const RegForm = () => {
-  // Pass the useFormik() hook initial form values, a validate function that will be called when
-  // form values change or fields are blurred, and a submit function that will
-  // be called when the form is submitted
-
+  // ...
   const navigate = useNavigate()
   const dispatch = useDispatch();
 
@@ -118,6 +116,7 @@ const RegForm = () => {
       config={inputConfigs('pw', 'Contraseña', 'Contraseña')}
       />
       <button className='btn btn-sm' type="submit">Enviar</button>
+      <NavLink to="/login">¿Ya tienes cuenta? Inicio de sesión</NavLink>
     </form>
   );
 };
